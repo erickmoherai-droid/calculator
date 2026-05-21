@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+align-items: center;
+margin: auto;
+justify-content: center;
+margin-top: 28px;
+        }
+        input{
+            text-align: center;
+            display: flex;
+            background-color: azure;
+            border-radius: 20px solid black;
+            height: 10vh;
+            width: 40vh;
+            align-items: center;
+            margin: auto;
+        }
+       .a{
+text-align: center;
+align-items: center;
+margin: auto;
+justify-content: center;
+border-radius: 10% solid yellowgreen;
+gap: 30px;
+        }
+        .a button{
+            background-color: aqua;
+            font-size: 20px;
+            width: 13vh;
+            height: 13vh;
+        }
+.a button:hover{
+  background-color: black;
+  cursor: pointer;
+  color: aqua;
+  border-radius: 2px solid green;
+  border: 1px solid blue ;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator project</title>
+</head>
+<body>
+    <input type="text" id="demo" placeholder=""><br>
+    <div class="a">
+    <button onclick="(num('1'))">1</button>
+      <button onclick="(num('2'))">2</button>
+        <button onclick="(num('3'))">3</button><br>
+          <button onclick="(num('4'))">4</button>
+            <button onclick="(num('5'))">5</button>
+              <button onclick="(num('*'))">*</button><br>
+                <button onclick="(num('6'))">6</button>
+                  <button onclick="(num('7'))">7</button>
+                    <button onclick="(num('+'))">+</button><br>
+                      <button onclick="(num('8'))">8</button>
+                        <button onclick="del()">clear</button>
+                          <button onclick="(num('9'))">9</button><br>
+                            <button onclick="(num('-'))">-</button>
+                              <button onclick="(num('0'))">0</button>
+                                <button onclick="cal()">=</button><br>
+                                  <button onclick="(num('/'))">/</button>
+                                    <button onclick="allclear()">ac</button>
+                                      <button onclick="(num('%'))">%</button><br>
+                                      </div>
+
+                                      <script>
+                                       let show=document.getElementById("demo");
+function num(input){
+show.value+=input;
+}
+function del(){
+   show.value =show.value.slice(0,-1);
+}
+
+function cal(){
+    show.value=eval(show.value);
+
+}
+function allclear(){
+    show.value="";
+}
+                                      </script>
+</body>
+</html>
